@@ -27,10 +27,13 @@
         <div class="inner">
           <h1>Youngbin Yoon</h1>
           <p> PhD Candidate. University of Pennsylvania.
-		  <br> Value Theory. Moral Philosophy. Aesthetics.
-		  <br> </p>
-		  <p> <span class="image"><img src="images/WebsitePhoto(2).jpg" alt="" style="width:400px;max-height:600px;" /></span> </p>
-		  <p> A copy of my CV can be found <a href="https://www.dropbox.com/scl/fi/s0awxdnbz77klyspaqa2a/Youngbin-Yoon-CV.pdf?rlkey=nrj208jmdspir6jc9qf1stsgb&dl=0 ">here</a>. </p>
+            <br> Value Theory. Moral Philosophy. Aesthetics.
+            <br>
+          </p>
+          <p> <span class="image"><img src="images/HeadshotA.jpg" alt="" /></span> </p>
+          <p> A copy of my CV can be found <a
+              href="https://www.dropbox.com/scl/fi/s0awxdnbz77klyspaqa2a/Youngbin-Yoon-CV.pdf?rlkey=nrj208jmdspir6jc9qf1stsgb&dl=0 ">here</a>.
+          </p>
         </div>
       </div>
       <nav>
@@ -59,12 +62,13 @@
             </a>
           </p>
           <p>
-            <a target="_blank" href="https://www.dropbox.com/scl/fi/z4bnpzchmwb27l2x0m9z9/Yoon-Love-Grace-and-Alienation-Draft.pdf?rlkey=ussrgo0mdfkzy14t6j31kmo1m&dl=0 ">
+            <a target="_blank"
+              href="https://www.dropbox.com/scl/fi/z4bnpzchmwb27l2x0m9z9/Yoon-Love-Grace-and-Alienation-Draft.pdf?rlkey=ussrgo0mdfkzy14t6j31kmo1m&dl=0 ">
               Love, Grace, and Alienation (*Under Review)
           </p>
           </a>
           <p>
-            <a target="_blank" > Regarding Friends and Significant Others (In Progress)
+            <a target="_blank"> Regarding Friends and Significant Others (In Progress)
             </a>
           </p>
         </div>
@@ -115,16 +119,16 @@
 
         <h4>Sole Instructor</h4>
         <div>
-	  <span class="item list-item">
+          <span class="item list-item">
             <p>• Ethical Questions</p>
             <p>Spring 2024</p>
           </span>
-		
-	  <span class="item list-item">
+
+          <span class="item list-item">
             <p>• Philosophy of Law</p>
             <p>Spring 2024</p>
           </span>
-		
+
           <span class="item list-item">
             <p>• Racial Justice</p>
             <p>Fall 2023</p>
@@ -172,32 +176,42 @@
       <article id="about">
         <h2 class="major">About</h2>
         <p> Hi!
-		<br> <br> I'm originally from Ridgewood, NJ. I studied undergrad at New York University where I majored in both math and philosophy. After college, I stayed in NYC as a consultant for an additional year until I started my PhD at the University of Pennsylvania. I'm currently living in Philadelphia, PA.
-		<br> <br> Outside of philosophy, I enjoy reading and writing fiction, going for Sunday morning runs, playing a casual game of chess, and chatting with friends (or strangers!) over tea. Lastly, but maybe most importantly, I am also an ardent Swiftie. </p>
+          <br> <br> I'm originally from Ridgewood, NJ. I studied undergrad at New York University where I majored in
+          both math and philosophy. After college, I stayed in NYC as a consultant for an additional year until I
+          started my PhD at the University of Pennsylvania. I'm currently living in Philadelphia, PA.
+          <br> <br> Outside of philosophy, I enjoy reading and writing fiction, going for Sunday morning runs, playing a
+          casual game of chess, and chatting with friends (or strangers!) over tea. Lastly, but maybe most importantly,
+          I am also an ardent Swiftie.
+        </p>
       </article>
 
       <!-- Contact -->
       <article id="contact">
         <h2 class="major">Contact</h2>
-        <form method="post" action="#">
+        <form id="contact-form" action="https://formspree.io/f/xqkvvjek" method="POST">
           <div class="fields">
             <div class="field half">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" id="name" name="name" required>
             </div>
             <div class="field half">
               <label for="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="email" id="email" name="_replyto" required>
             </div>
             <div class="field">
               <label for="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" required></textarea>
             </div>
           </div>
           <ul class="actions">
-            <li><input type="submit" value="Send Message" class="primary" /></li>
+            <li><button class="g-recaptcha" data-sitekey="6LchmyMpAAAAABPCAZs4yA4u04jVdQH4ly4erVg1"
+                data-callback='onSubmit' data-action='submit' class="primary">Submit</button></li>
+
+            <!-- <li><input type="submit" value="Send Message" class="primary" /></li> -->
             <li><input type="reset" value="Reset" /></li>
           </ul>
+
+
         </form>
       </article>
 
@@ -467,7 +481,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("contact-form").submit();
+    }
+  </script>
 </body>
 
 </html>
